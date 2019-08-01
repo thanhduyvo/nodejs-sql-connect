@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-sql-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhduyvo/nodejs-sql-connect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhduyvo/nodejs-sql-connect/issues"
+  },
+  "homepage": "https://github.com/thanhduyvo/nodejs-sql-connect#readme",
+  "dependencies": {
+    "async": "^3.1.0",
+    "tedious": "^6.2.0"
+  }
+}
