@@ -2,18 +2,27 @@ var Connection = require("tedious").Connection;
 var Request = require("tedious").Request;
 var async = require("async");
 
+// update me
+const SERVER_NAME = "<server>";
+const USERNAME = "<username>";
+const PASSWORD = "<password>";
+const DATABASE_NAME = "<database>";
+
+// update me
+var select_statement = "<select_statement>";
+
 // Create connection to database
 var config = {
-  server: "<server>", // update me
+  server: SERVER_NAME,
   authentication: {
     type: "default",
     options: {
-      userName: "<username>", // update me
-      password: "<password>" // update me
+      userName: USERNAME,
+      password: PASSWORD
     }
   },
   options: {
-    database: "<database>" // update me
+    database: DATABASE_NAME
   }
 };
 
@@ -23,7 +32,7 @@ function Read(callback) {
   console.log("Reading rows from the Table...");
 
   // Read all rows from table
-  request = new Request("<select_statement>;", (err, rowCount, rows) => {
+  request = new Request(select_statement, (err, rowCount, rows) => {
     if (err) callback(err);
     else {
       console.log(rowCount + " row(s) returned");
